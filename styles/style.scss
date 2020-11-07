@@ -1,0 +1,8 @@
+@import './partials/variables';
+@import './partials/baserules';
+@import './partials/header';
+
+h1 {
+  color: map-get($palette, red);
+  margin-top: map-get($margins, simple);
+}
