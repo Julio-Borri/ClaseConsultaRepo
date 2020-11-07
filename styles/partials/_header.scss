@@ -1,0 +1,107 @@
+.header {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    map-get($palette, dark),
+    map-get($palette, green)
+  );
+}
+
+.navbar {
+  background-color: map-get($palette, dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  &--brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: map-get($margins, simple);
+  }
+
+  &--nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: map-get($margins, simple);
+  }
+}
+
+.brand--title {
+  color: map-get($palette, green);
+  cursor: pointer;
+
+  &:hover {
+    color: map-get($palette, gray);
+  }
+}
+
+.nav {
+  &--item {
+    margin-right: map-get($margins, doble);
+    border: 1px solid map-get($palette, green);
+    border-radius: 5px;
+
+    &:hover {
+      border: 1px solid map-get($palette, gray);
+    }
+  }
+  &--link {
+    padding: map-get($margins, simple);
+    color: map-get($palette, green);
+    text-decoration: none;
+    display: block;
+    height: 100%;
+
+    &:hover {
+      color: map-get($palette, gray);
+    }
+  }
+}
+
+.slogan {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  padding: map-get($margins, doble);
+
+  &--title {
+    margin: map-get($margins, doble);
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+
+    &--brand {
+      width: 30%;
+      justify-content: flex-start;
+      margin-left: map-get($margins, doble);
+    }
+
+    &--nav {
+      width: 70%;
+      justify-content: flex-end;
+      margin-right: map-get($margins, doble);
+    }
+  }
+
+  .slogan {
+    &--title {
+      font-size: 3rem;
+    }
+    &--subtitle {
+      font-size: 2rem;
+    }
+  }
+}
