@@ -1,0 +1,44 @@
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carta {
+  width: 90%;
+  height: 350px;
+  background-image: url('https://picsum.photos/200/300');
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  margin-top: map-get($margins, doble);
+  display: flex;
+  align-items: flex-end;
+
+  &--1 {
+    background-image: url('https://picsum.photos/201/300');
+  }
+  &--2 {
+    background-image: url('https://picsum.photos/202/300');
+  }
+  &--3 {
+    background-image: url('https://picsum.photos/200/300');
+  }
+
+  &--texto {
+    color: white;
+    font-weight: bold;
+    background-color: transparentize(map-get($palette, green), 0.5);
+    border-radius: 0 0 5px 5px;
+    margin: 0px;
+    text-align: center;
+    padding: map-get($margins, simple);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .carta {
+    width: 30%;
+    margin: 0 5px;
+  }
+}
